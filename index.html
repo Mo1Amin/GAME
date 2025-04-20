@@ -625,7 +625,9 @@
 
         function activateRaghdMode() {
             if (raghdMode) return;
-    
+          if (!gameRunning) {
+        startGame();
+    }
     raghdMode = true;
     document.body.classList.add('raghd-mode');
     scoreMultiplier = 10;
